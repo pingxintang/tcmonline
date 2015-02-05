@@ -7,7 +7,7 @@
 </head>
 <body onload="drawCanvas()">
     <div>
-        <canvas id="myCanvas" width="900" height="900">
+        <canvas id="myCanvas">
             <p>Your browser doesn't support canvas.</p>
         </canvas>
     </div>
@@ -28,29 +28,32 @@
                 // If Canvas is supported, load the image
                 //
                 happy = new Image();
+                happy.src = "image/wu.yun.liu.qi.jpg";
                 happy.onload = loadingComplete;
-                happy.src = "image/luo.pan.jpg";
             }
         }
 
         function loadingComplete(e) {
+
+            surface.height = happy.height;
+            surface.width = happy.width;
 
             // When the image has loaded begin the loop
             //
             setInterval(loop, 166);
         }
 
+        /// Each loop we rotate the image
+        ///
         function loop() {
-
-            // Each loop we rotate the image
             // Grab the context
             //
             var surfaceContext = surface.getContext('2d');
 
             // Clear the canvas to White
             //
-            surfaceContext.fillStyle = "rgb(255,255,255)";
-            surfaceContext.fillRect(0, 0, surface.width, surface.height);
+            //surfaceContext.fillStyle = "rgb(255,255,255)";
+            //surfaceContext.fillRect(0, 0, surface.width, surface.height);
 
             // Save the current context
             //
