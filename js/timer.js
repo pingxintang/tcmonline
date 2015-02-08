@@ -25,7 +25,7 @@ function loadingComplete(e) {
 
     // When the image has loaded begin the loop
     //
-    setInterval(loop, 166);
+    setInterval(loop, 1);
 }
 
 /// Each loop we rotate the image
@@ -73,5 +73,5 @@ function DegToRad(d) {
 
     // Converts degrees to radians
     //
-    return d * 0.0174532925199432957;
+    return d * 0.0174532925199432957 / 166;
 }
