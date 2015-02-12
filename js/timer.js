@@ -25,7 +25,7 @@ function loadingComplete(e) {
 
     // When the image has loaded begin the loop
     //
-    setInterval(loop, 1);
+    setInterval(loop, 166);
 }
 
 /// Each loop we rotate the image
@@ -34,11 +34,6 @@ function loop() {
     // Grab the context
     //
     var surfaceContext = surface.getContext('2d');
-
-    // Clear the canvas to White
-    //
-    //surfaceContext.fillStyle = "rgb(255,255,255)";
-    //surfaceContext.fillRect(0, 0, surface.width, surface.height);
 
     // Save the current context
     //
@@ -73,5 +68,5 @@ function DegToRad(d) {
 
     // Converts degrees to radians
     //
-    return d * 0.0174532925199432957 / 166;
+    return d * 0.0174532925199432957;
 }
